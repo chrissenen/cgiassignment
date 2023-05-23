@@ -105,7 +105,7 @@ public class RecipeController {
             @ApiResponse(code = 404, message = "Different error messages related to criteria and recipe")
 
     })
-    @RequestMapping(method = RequestMethod.POST, path = "/search")
+    @RequestMapping(method = RequestMethod.GET, path = "/search")
     public List<RecipeResponse> searchRecipe(@RequestParam(name = "page", defaultValue = "0") int page,
                                              @RequestParam(name = "size", defaultValue = "10") int size,
                                              @ApiParam(value = "Properties of the the search")
